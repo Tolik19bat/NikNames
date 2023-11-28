@@ -6,8 +6,10 @@ test('should sum', () => {
   expect(result).toBe(6);
 });
 
-import Validator from '../app';
-const validator = new Validator();
+//===============================================================
+
+import Validator from '../app';//импортируем класс
+const validator = new Validator();//присваеваем объявление класса
 
 test('Допустимы только латинские буквы', () => {// тест
   const result = validator.validateUsername('Анна');//используя метод из класса
