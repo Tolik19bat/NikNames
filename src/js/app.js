@@ -1,25 +1,16 @@
 // TODO: write your code here
-// import sum from './basic';
-//
-// console.log('worked');
-//
-// console.log(sum([1, 2]));
+import sum from './basic';
 
-//=============================================
-//входные данные
-const expectName = "Anna";
+console.log('worked');
 
-class Validator {
-  constructor(name) {
-    this.name = name;
+console.log(sum([1, 2]));
+
+export default class Validator {//создаём класс
+  constructor(name) {//конструктор с параметром
+    this.name = name;//объявляем свойство
   }
-  validateUsername(userName) {
-    const re = /^[^A-Za-z0-9]$/
-      console.log(re.test(userName))
-      return re.test(userName);
+  validateUsername(userName) {//создаём метод
+    const re = /^(?!(.*\d){3})[^\-_][^\d][a-z\-_0-9]+[^\-_0-9]+$/i;//шаблон проверки
+      return re.test(userName);//возвращаем значение проверки
     }
   }
-
-const checkName = new Validator(expectName);
-checkName.validateUsername(expectName)
-// ==================================================
